@@ -11,8 +11,10 @@ for(i = 1; i < 10; i++) {
     $('#unitbuttons').append(link)
 }
 // lessons
-lessons = lessonsInUnit["unit"+unit]
 $('#lessonbuttons').html('')
+let link = $(`<a href="${baseUrl+'?unit='+unit}">Unit home</a><span>&nbsp;&nbsp;</span>`)
+$('#lessonbuttons').append(link)
+lessons = lessonsInUnit["unit"+unit]
 for(i = 1; i < lessons+1; i++) {
     let link = $(`<a href="${baseUrl+'?unit='+unit+'&lesson='+i}">Lesson ${i}</a><span>&nbsp;&nbsp;</span>`)
     $('#lessonbuttons').append(link)

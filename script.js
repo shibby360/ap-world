@@ -9,7 +9,8 @@ function amsco(unit_,lesson_) {
 function notes(unit_, lesson_) {
     let content = $('#notesTemplate');
     let notesUrl = baseUrl+'/unit'+unit_+'/lesson'+lesson_+'/notes'+unit_+'.'+lesson_+'.pdf'
-    if(unit_ !== 1) {
+    if(unit_ !== "1") {
+        alert('found notes')
         content.find('a').attr('href', notesUrl);
         content.find('a').text("Notes template for "+unit_+"."+lesson_);
         content.find('iframe').attr('src', notesUrl);
@@ -25,6 +26,23 @@ function kbat(unit_) {
     content.find('a').text("Unit "+unit_+" KBAT");
     return content.html();
 }
+function learningObjectives(unit_,lesson_,div) {
+    fetch(baseUrl+'/unit'+unit_+'/learning-objectives').then(function(r) {
+        r.text().then(function(text) {
+            let objectives = "";
+            let objectivesArray = text.split('\n\n')
+            if(lesson_ != null) {
+                objectives = objectivesArray[lesson_-1]   
+            } else {
+                objectives = text
+            }
+            let paragraph = $(`<p style="font-weight:bold;margin-bottom:2px;">Learning objectives:</p>`);
+            div.append(paragraph);
+            let objectivesP = $('<p style="margin:0;">'+objectives.replaceAll('\n','<br>')+'</p>');
+            div.append(objectivesP);
+        })
+    })
+}
 if(unit !== null) {
     $('#starter').hide();
     if(lesson === null) {
@@ -32,6 +50,7 @@ if(unit !== null) {
         let kbatDiv = $('<div id="kbatDiv" class="content">');
         kbatDiv.html(kbat(unit));
         $('#body').append(kbatDiv);
+        learningObjectives(unit,lesson,kbatDiv);
     } else {
         // amsco section
         let amscoDiv = $('<div id="amscoDiv" class="content">');
@@ -45,5 +64,6 @@ if(unit !== null) {
         let kbatDiv = $('<div id="kbatDiv" class="content">');
         kbatDiv.html(kbat(unit));
         $('#body').append(kbatDiv);
+        learningObjectives(unit,lesson,kbatDiv);
     }
 }
