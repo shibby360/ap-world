@@ -18,16 +18,32 @@ function notes(unit_, lesson_) {
     }
     return content.html();
 }
+function kbat(unit_) {
+    let content = $('#kbatTemplate');
+    let kbatUrl = kbatLinks["unit"+unit_]
+    content.find('a').attr('href', kbatUrl);
+    content.find('a').text("Unit "+unit_+" KBAT");
+    return content.html();
+}
 if(unit !== null) {
     $('#starter').hide();
     if(lesson === null) {
-        
+        // unit overview page
+        let kbatDiv = $('<div id="kbatDiv" class="content">');
+        kbatDiv.html(kbat(unit));
+        $('#body').append(kbatDiv);
     } else {
+        // amsco section
         let amscoDiv = $('<div id="amscoDiv" class="content">');
         amscoDiv.html(amsco(unit,lesson));
         $('#body').append(amscoDiv);
+        // notes section
         let notesDiv = $('<div id="notesDiv" class="content">');
         notesDiv.html(notes(unit,lesson));
-        $('#body').append(notesDiv)
+        $('#body').append(notesDiv);
+        // kbat section
+        let kbatDiv = $('<div id="kbatDiv" class="content">');
+        kbatDiv.html(kbat(unit));
+        $('#body').append(kbatDiv);
     }
 }
