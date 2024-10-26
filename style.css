@@ -33,3 +33,9 @@ body {
 .content > a {
     text-align: center;
 }
+#lessontitle {
+    text-align: center;
+    font-size: 135%;
+    margin: 0;
+    margin-top: 0.5%;
+}
