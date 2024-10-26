@@ -10,7 +10,6 @@ function notes(unit_, lesson_) {
     let content = $('#notesTemplate');
     let notesUrl = baseUrl+'/unit'+unit_+'/lesson'+lesson_+'/notes'+unit_+'.'+lesson_+'.pdf'
     if(unit_ !== "1") {
-        alert('found notes')
         content.find('a').attr('href', notesUrl);
         content.find('a').text("Notes template for "+unit_+"."+lesson_);
         content.find('iframe').attr('src', notesUrl);
