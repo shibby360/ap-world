@@ -7,5 +7,14 @@ lessonTitles = {
         "lesson5":"State Building in Africa",
         "lesson6":"Developments in Europe",
         "lesson7":"Comparisons in the Period from c. 1200 to c. 1450"
+    },
+    "unit2":{
+        "lesson1":"Silk Roads",
+        "lesson2":"The Mongol Empire and the Making of the Modern World",
+        "lesson3":"Indian Ocean",
+        "lesson4":"Trans-Saharan Trade Routes",
+        "lesson5":"Cultural Consequences of Connectivity",
+        "lesson6":"Environmental Consequences of Connectivity",
+        "lesson7":"Comparison of Economic Exchange"
     }
 }
