@@ -52,7 +52,7 @@ if(unit !== null) {
         learningObjectives(unit,lesson,kbatDiv);
     } else {
         // lesson title
-        let lessonTitle = $('<p id="lessontitle">Lesson '+unit+lesson+': '+lessonTitles['unit'+unit]['lesson'+lesson]+'</p>')
+        let lessonTitle = $('<p id="lessontitle">Lesson '+unit+"."+lesson+': '+lessonTitles['unit'+unit]['lesson'+lesson]+'</p>')
         $('#header').append(lessonTitle)
         // amsco section
         let amscoDiv = $('<div id="amscoDiv" class="content">');
