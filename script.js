@@ -54,6 +54,18 @@ if(unit !== null) {
         // lesson title
         let lessonTitle = $('<p id="lessontitle">Lesson '+unit+"."+lesson+': '+lessonTitles['unit'+unit]['lesson'+lesson]+'</p>')
         $('#header').append(lessonTitle)
+        // essential question
+        let essentialQ = $('<p style="margin: 0;text-align: center;"></p>')
+        let eqtext = "EQ: " + eqs["unit"+unit]["lesson"+lesson]
+        let fontSize;
+        essentialQ.text(eqtext)
+        if(eqtext.length > 50) {
+            fontSize = "large"
+        } else {
+            fontSize = "larger"
+        }
+        essentialQ.css('font-size', fontSize)
+        $('#header').append(essentialQ)
         // amsco section
         let amscoDiv = $('<div id="amscoDiv" class="content">');
         amscoDiv.html(amsco(unit,lesson));

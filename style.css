@@ -3,7 +3,7 @@ body {
     height: calc(100vh - 16px);
     margin: 8px;
     grid-template-columns: 1fr;
-    grid-template-rows: 10% 1fr;
+    grid-template-rows: 15% 1fr;
 }
 #header {
     grid-column: 1/3;
