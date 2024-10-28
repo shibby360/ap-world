@@ -20,7 +20,17 @@ eqs = {
     "unit3":{
         "lesson1":"How did certain land-based empires develop and expand in the period from 1450-1750?",
         "lesson2":"How did rulers in land-based empires legitimize and consolidate their power from 1450 to 1750?",
-        "lesson3":"How did different belief systems endure or change during the period frmo 1450-1750?",
+        "lesson3":"How did different belief systems endure or change during the period from 1450-1750?",
         "lesson4":"By what methods did empires increase their societal and cultural influence from c. 1450-c.1750?"
+    },
+    "unit4":{
+        "lesson1":"How did cross-cultural interactions spread technology and facilitate changes in trade and travel from 1450 to 1750?",
+        "lesson2":"What were the causes and effects of the state-sponsored expansion of maritime exploration?",
+        "lesson3":"What were the causes of the Columbian Exchange and its effects on the Eastern and Western Hemispheres?",
+        "lesson4":"How were the empires of European states established between 1450 to 1750, and what economic and labor systems fueled them?",
+        "lesson5":"What econmic stategies did maritime empires use to increase their power, and how did the developing empires affect political, econmic, religious, and cultural dynamics?",
+        "lesson6":"How did the development of state power result in external and internal challenges in the period between 1450 and 1750?",
+        "lesson7":"How were social categories, roles, and practices maintained or changed from 1450 to 1750?",
+        "lesson8":"How did economic developments from 1450 to 1750 affect social structures over time?"
     }
 }
