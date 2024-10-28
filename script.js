@@ -29,7 +29,7 @@ function learningObjectives(unit_,lesson_,div) {
     fetch(baseUrl+'/unit'+unit_+'/learning-objectives').then(function(r) {
         r.text().then(function(text) {
             let objectives = "";
-            let objectivesArray = text.split('\n\n')
+            let objectivesArray = text.replaceAll('\r','').split('\n\n')
             if(lesson_ != null) {
                 objectives = objectivesArray[lesson_-1]   
             } else {
