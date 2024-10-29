@@ -4,18 +4,18 @@ if(document.location.host !== "shibby360.github.io") {
 }
 const params = new URLSearchParams(window.location.search);
 let unit = params.get('unit');
-let lesson = params.get('lesson');
+let topic = params.get('topic');
 // Units
 for(i = 1; i < 10; i++) {
     let link = $(`<a href="${baseUrl+'?unit='+i}">Unit ${i}</a><span>&nbsp;&nbsp;</span>`)
     $('#unitbuttons').append(link)
 }
-// lessons
-$('#lessonbuttons').html('')
+// topics
+$('#topicbuttons').html('')
 let link = $(`<a href="${baseUrl+'?unit='+unit}">Unit home</a><span>&nbsp;&nbsp;</span>`)
-$('#lessonbuttons').append(link)
-lessons = lessonsInUnit["unit"+unit]
-for(i = 1; i < lessons+1; i++) {
-    let link = $(`<a href="${baseUrl+'?unit='+unit+'&lesson='+i}">Lesson ${i}</a><span>&nbsp;&nbsp;</span>`)
-    $('#lessonbuttons').append(link)
+$('#topicbuttons').append(link)
+topics = topicsInUnit["unit"+unit]
+for(i = 1; i < topics+1; i++) {
+    let link = $(`<a href="${baseUrl+'?unit='+unit+'&topic='+i}">Topic ${i}</a><span>&nbsp;&nbsp;</span>`)
+    $('#topicbuttons').append(link)
 }

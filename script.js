@@ -1,17 +1,17 @@
-function amsco(unit_,lesson_) {
+function amsco(unit_,topic_) {
     let content = $('#amscoTemplate');
-    let amscoUrl = baseUrl+'/unit'+unit_+'/lesson'+lesson_+'/Amsco_'+unit_+'.'+lesson_+'.pdf'
+    let amscoUrl = baseUrl+'/unit'+unit_+'/topic'+topic_+'/Amsco_'+unit_+'.'+topic_+'.pdf'
     content.find('a').attr('href', amscoUrl);
     content.find('iframe').attr('src', amscoUrl);
-    content.find('a').text("Amsco "+unit_+"."+lesson_+" Reading");
+    content.find('a').text("Amsco "+unit_+"."+topic_+" Reading");
     return content.html();
 }
-function notes(unit_, lesson_) {
+function notes(unit_, topic_) {
     let content = $('#notesTemplate');
-    let notesUrl = baseUrl+'/unit'+unit_+'/lesson'+lesson_+'/notes'+unit_+'.'+lesson_+'.pdf'
+    let notesUrl = baseUrl+'/unit'+unit_+'/topic'+topic_+'/notes'+unit_+'.'+topic_+'.pdf'
     if(unit_ !== "1") {
         content.find('a').attr('href', notesUrl);
-        content.find('a').text("Notes template for "+unit_+"."+lesson_);
+        content.find('a').text("Notes template for "+unit_+"."+topic_);
         content.find('iframe').attr('src', notesUrl);
     } else {
         content.find('a').text("No notes template available");
@@ -25,13 +25,13 @@ function kbat(unit_) {
     content.find('a').text("Unit "+unit_+" KBAT");
     return content.html();
 }
-function learningObjectives(unit_,lesson_,div) {
+function learningObjectives(unit_,topic_,div) {
     fetch(baseUrl+'/unit'+unit_+'/learning-objectives').then(function(r) {
         r.text().then(function(text) {
             let objectives = "";
             let objectivesArray = text.replaceAll('\r','').split('\n\n')
-            if(lesson_ != null) {
-                objectives = objectivesArray[lesson_-1]   
+            if(topic_ != null) {
+                objectives = objectivesArray[topic_-1]   
             } else {
                 objectives = text
             }
@@ -44,19 +44,19 @@ function learningObjectives(unit_,lesson_,div) {
 }
 if(unit !== null) {
     $('#starter').hide();
-    if(lesson === null) {
+    if(topic === null) {
         // unit overview page
         let kbatDiv = $('<div id="kbatDiv" class="content">');
         kbatDiv.html(kbat(unit));
         $('#body').append(kbatDiv);
-        learningObjectives(unit,lesson,kbatDiv);
+        learningObjectives(unit,topic,kbatDiv);
     } else {
-        // lesson title
-        let lessonTitle = $('<p id="lessontitle">Lesson '+unit+"."+lesson+': '+lessonTitles['unit'+unit]['lesson'+lesson]+'</p>')
-        $('#header').append(lessonTitle)
+        // topic title
+        let topicTitle = $('<p id="topictitle">Topic '+unit+"."+topic+': '+topicTitles['unit'+unit]['topic'+topic]+'</p>')
+        $('#header').append(topicTitle)
         // essential question
         let essentialQ = $('<p style="margin: 0;text-align: center;"></p>')
-        let eqtext = "EQ: " + eqs["unit"+unit]["lesson"+lesson]
+        let eqtext = "EQ: " + eqs["unit"+unit]["topic"+topic]
         let fontSize;
         essentialQ.text(eqtext)
         if(eqtext.length > 50) {
@@ -68,16 +68,16 @@ if(unit !== null) {
         $('#header').append(essentialQ)
         // amsco section
         let amscoDiv = $('<div id="amscoDiv" class="content">');
-        amscoDiv.html(amsco(unit,lesson));
+        amscoDiv.html(amsco(unit,topic));
         $('#body').append(amscoDiv);
         // notes section
         let notesDiv = $('<div id="notesDiv" class="content">');
-        notesDiv.html(notes(unit,lesson));
+        notesDiv.html(notes(unit,topic));
         $('#body').append(notesDiv);
         // kbat section
         let kbatDiv = $('<div id="kbatDiv" class="content">');
         kbatDiv.html(kbat(unit));
         $('#body').append(kbatDiv);
-        learningObjectives(unit,lesson,kbatDiv);
+        learningObjectives(unit,topic,kbatDiv);
     }
 }

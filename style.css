@@ -14,7 +14,7 @@ body {
     width: 100%;
     text-align: center;
 }
-#lessonbuttons {
+#topicbuttons {
     width: 100%;
     text-align: center;
 }
@@ -33,7 +33,7 @@ body {
 .content > a {
     text-align: center;
 }
-#lessontitle {
+#topictitle {
     text-align: center;
     font-size: 135%;
     margin: 0;
