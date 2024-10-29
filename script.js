@@ -44,12 +44,14 @@ function learningObjectives(unit_,topic_,div) {
 }
 if(unit !== null) {
     $('#starter').hide();
-    if(topic === null) {
-        // unit overview page
+    if(topic === null) { // unit overview page
         let kbatDiv = $('<div id="kbatDiv" class="content">');
         kbatDiv.html(kbat(unit));
         $('#body').append(kbatDiv);
         learningObjectives(unit,topic,kbatDiv);
+        // unit title
+        let topicTitle = $('<p id="unittitle">Unit '+unit+": "+unitTitles['unit'+unit]+'</p>')
+        $('#header').append(topicTitle)
     } else {
         // topic title
         let topicTitle = $('<p id="topictitle">Topic '+unit+"."+topic+': '+topicTitles['unit'+unit]['topic'+topic]+'</p>')

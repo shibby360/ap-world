@@ -33,7 +33,7 @@ body {
 .content > a {
     text-align: center;
 }
-#topictitle {
+#topictitle, #unittitle {
     text-align: center;
     font-size: 135%;
     margin: 0;
