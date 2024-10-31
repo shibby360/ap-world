@@ -50,17 +50,17 @@ function reviewLinks(unit_,topic_) {
             let links = topic != null ? linksArray[topic_-1] : text
             let newLinksArr = links.split('\n')
             let paragraph = $(`<p style="font-weight:bold;margin-bottom:2px;">Review links: </p>`);
-            div.append(paragraph);
+            content.append(paragraph);
             for(let link of newLinksArr) {
                 if(link.startsWith('Topic')) {
                     let topLesson = $('<p style="margin:0;">' + link + '</p>');
-                    div.append(topLesson);
+                    content.append(topLesson);
                 } else {
                     let splitLink = link.split('|')
                     let lnkRef = "";
                     let lnkTxt = splitLink[0] == "" ? splitLink[1] : splitLink[0]
                     let linkEl = $(`<a style="margin:0;" href="${lnkRef}">${lnkTxt}</a>`)
-                    div.append(linkEl)
+                    content.append(linkEl)
                 }
             }
         })
