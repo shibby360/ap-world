@@ -42,6 +42,30 @@ function learningObjectives(unit_,topic_,div) {
         })
     })
 }
+function reviewLinks(unit_,topic_,div) {
+    fetch(baseUrl+'/unit'+unit_+'/learning-objectives').then(function(r) {
+        r.text().then(function(text) {
+            let links = "";
+            let linksArray = text.replaceAll('\r','').split('\n\n')
+            if(topic_ != null) {
+                links = linksArray[topic_-1]   
+            } else {
+                links = text
+            }
+            let newLinksArr = links.split('\n')
+            let paragraph = $(`<p style="font-weight:bold;margin-bottom:2px;">Review links: </p>`);
+            div.append(paragraph);
+            for(let link of newLinksArr) {
+                if(link.startsWith('Topic')) {
+                    let topLesson = $('<p style="margin:0;">' + link + '</p>');
+                    div.append(topLesson);
+                } else {
+                    
+                }
+            }
+        })
+    })
+}
 if(unit !== null) {
     $('#starter').hide();
     if(topic === null) { // unit overview page
