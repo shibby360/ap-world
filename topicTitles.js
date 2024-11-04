@@ -32,5 +32,17 @@ topicTitles = {
         "topic6":"International and External Challenges to State Power from 1450 to 1750",
         "topic7":"Changing Social Hierarchies from 1450 to 1750",
         "topic8":"Continuity and Change from 1450 to 1750"
+    },
+    "unit5":{
+        "topic1":"The Enlightment",
+        "topic2":"Nationalism and Revolutions in the Period from 1750 to 1900",
+        "topic3":"Industrial Revolution Begins",
+        "topic4":"Industrialization Spreads in the Period from 1750 to 1900",
+        "topic5":"Technology of the Industrial Age",
+        "topic6":"Industrialization: Government's Role from 1750 to 1900",
+        "topic7":"Economic Developments and Innovations in the Industrial Age",
+        "topic8":"Reactions to the Industrial Economy from 1750 to 1900",
+        "topic9":"Society and the Industrial Age",
+        "topic10":"Continuity and Change in the Industrial Age"
     }
 }

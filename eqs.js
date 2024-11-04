@@ -32,5 +32,17 @@ eqs = {
         "topic6":"How did the development of state power result in external and internal challenges in the period between 1450 and 1750?",
         "topic7":"How were social categories, roles, and practices maintained or changed from 1450 to 1750?",
         "topic8":"How did economic developments from 1450 to 1750 affect social structures over time?"
+    },
+    "unit5":{
+        "topic1":"How did the Enlightenment shapen the intellectual and ideological thinking that affected reform and revolution after 1750?",
+        "topic2":"What were the causes and effects of the various revolutions in the period from 1750 to 1900, including influences of the Enlightenment and emerging nationalism?",
+        "topic3":"What factors contributed to and characterized industrialization in the period from 1750 to 1900?",
+        "topic4":"How did different types and locations of production develop and change over time?",
+        "topic5":"How did technology shape economic production during the period from 1750 to 1900?",
+        "topic6":"What economic strategies did different states and empires adopt, and what were the causes and effects of those strategies?",
+        "topic7":"How did the development of economic systems, ideologies, and institutions contribute to change between 1750 and 1900?",
+        "topic8":"What conditions led to calls for change in industrial societies, and what were the effects of those efforts?",
+        "topic9":"How did industrialization cause change in existing social hierarchies and standards of living?",
+        "topic10":"How did the Industrial Revolution demonstrate both continuity and change?"
     }
 }
