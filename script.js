@@ -42,30 +42,34 @@ function learningObjectives(unit_,topic_,div) {
         })
     })
 }
-function reviewLinks(unit_,topic_) {
-    let content = $('#reviewTemplate')
-    fetch(baseUrl+'/unit'+unit_+'/learning-objectives').then(function(r) {
+function reviewLinks(unit_,topic_,div) {
+    fetch(baseUrl+'/unit'+unit_+'/review-links').then(function(r) {
         r.text().then(function(text) {
+            alert(text)
             let linksArray = text.replaceAll('\r','').split('\n\n')
-            let links = topic != null ? linksArray[topic_-1] : text
+            let links = topic_ != null ? linksArray[topic_-1] : text
             let newLinksArr = links.split('\n')
             let paragraph = $(`<p style="font-weight:bold;margin-bottom:2px;">Review links: </p>`);
-            content.append(paragraph);
+            div.append(paragraph);
             for(let link of newLinksArr) {
+                alert(link)
                 if(link.startsWith('Topic')) {
                     let topLesson = $('<p style="margin:0;">' + link + '</p>');
-                    content.append(topLesson);
+                    div.append(topLesson);
                 } else {
+                    alert(link)
                     let splitLink = link.split('|')
-                    let lnkRef = "";
+                    alert(splitLink)
+                    let lnkRef = splitLink[0];
+                    alert(lnkRef)
                     let lnkTxt = splitLink[0] == "" ? splitLink[1] : splitLink[0]
+                    alert(lnkTxt)
                     let linkEl = $(`<a style="margin:0;" href="${lnkRef}">${lnkTxt}</a>`)
-                    content.append(linkEl)
+                    div.append(linkEl)
                 }
             }
         })
     })
-    return content.html();
 }
 if(unit !== null) {
     $('#starter').hide();
@@ -83,7 +87,7 @@ if(unit !== null) {
         $('#header').append(topicTitle)
         // essential question
         let essentialQ = $('<p style="margin: 0;text-align: center;"></p>')
-        let eqtext = "EQ: " + eqs["unit"+unit]["topic"+topic]+"?"
+        let eqtext = "EQ: " + eqs["unit"+unit]["topic"+topic]
         let fontSize = eqtext.length > 50 ? "large" : "larger";
         essentialQ.text(eqtext)
         essentialQ.css('font-size', fontSize)
@@ -103,7 +107,8 @@ if(unit !== null) {
         learningObjectives(unit,topic,kbatDiv);
         // review section
         let rewiewDiv = $('<div id="reviewDiv" class="content">');
-        rewiewDiv.html(reviewLinks(unit,topic));
+        reviewDiv.html($('#reviewTemplate').html())
+        reviewLinks(unit,topic,rewiewDiv)
         $('#body').append(reviewDiv);
     }
 }
