@@ -87,7 +87,7 @@ if(unit !== null) {
         $('#header').append(topicTitle)
         // essential question
         let essentialQ = $('<p style="margin: 0;text-align: center;"></p>')
-        let eqtext = "EQ: " + eqs["unit"+unit]["topic"+topic]
+        let eqtext = "EQ: " + eqs["unit"+unit]["topic"+topic]+"?"
         let fontSize = eqtext.length > 50 ? "large" : "larger";
         essentialQ.text(eqtext)
         essentialQ.css('font-size', fontSize)
