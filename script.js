@@ -45,25 +45,19 @@ function learningObjectives(unit_,topic_,div) {
 function reviewLinks(unit_,topic_,div) {
     fetch(baseUrl+'/unit'+unit_+'/review-links').then(function(r) {
         r.text().then(function(text) {
-            alert(text)
             let linksArray = text.replaceAll('\r','').split('\n\n')
             let links = topic_ != null ? linksArray[topic_-1] : text
             let newLinksArr = links.split('\n')
             let paragraph = $(`<p style="font-weight:bold;margin-bottom:2px;">Review links: </p>`);
             div.append(paragraph);
             for(let link of newLinksArr) {
-                alert(link)
                 if(link.startsWith('Topic')) {
                     let topLesson = $('<p style="margin:0;">' + link + '</p>');
                     div.append(topLesson);
                 } else {
-                    alert(link)
                     let splitLink = link.split('|')
-                    alert(splitLink)
                     let lnkRef = splitLink[0];
-                    alert(lnkRef)
                     let lnkTxt = splitLink[0] == "" ? splitLink[1] : splitLink[0]
-                    alert(lnkTxt)
                     let linkEl = $(`<a style="margin:0;" href="${lnkRef}">${lnkTxt}</a>`)
                     div.append(linkEl)
                 }
@@ -106,9 +100,9 @@ if(unit !== null) {
         $('#body').append(kbatDiv);
         learningObjectives(unit,topic,kbatDiv);
         // review section
-        let rewiewDiv = $('<div id="reviewDiv" class="content">');
+        let reviewDiv = $('<div id="reviewDiv" class="content">');
         reviewDiv.html($('#reviewTemplate').html())
-        reviewLinks(unit,topic,rewiewDiv)
+        reviewLinks(unit,topic,reviewDiv)
         $('#body').append(reviewDiv);
     }
 }
