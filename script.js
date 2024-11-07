@@ -45,22 +45,17 @@ function learningObjectives(unit_,topic_,div) {
 function reviewLinks(unit_,topic_,div) {
     fetch(baseUrl+'/unit'+unit_+'/review-links').then(function(r) {
         r.text().then(function(text) {
-            let linksArray = text.replaceAll('\r','').split('\n\n')
-            let links = topic_ != null ? linksArray[topic_-1] : text
-            let newLinksArr = links.split('\n')
+            // let linksArray = text.replaceAll('\r','').split('\n\n')
+            // let links = topic_ != null ? linksArray[topic_-1] : text
+            let newLinksArr = text.replaceAll('\r','').split('\n')
             let paragraph = $(`<p style="font-weight:bold;margin-bottom:2px;">Review links: </p>`);
             div.append(paragraph);
             for(let link of newLinksArr) {
-                if(link.startsWith('Topic')) {
-                    let topLesson = $('<p style="margin:0;">' + link + '</p>');
-                    div.append(topLesson);
-                } else {
-                    let splitLink = link.split('|')
-                    let lnkRef = splitLink[0];
-                    let lnkTxt = splitLink[0] == "" ? splitLink[1] : splitLink[0]
-                    let linkEl = $(`<a style="margin:0;" href="${lnkRef}">${lnkTxt}</a>`)
-                    div.append(linkEl)
-                }
+                let splitLink = link.split('|');
+                let lnkRef = splitLink[0];
+                let lnkTxt = splitLink[0] == "" ? splitLink[1] : splitLink[0];
+                let linkEl = $(`<a style="margin:0;" href="${lnkRef}">${lnkTxt}</a>`);
+                div.append(linkEl);
             }
         })
     })
@@ -68,13 +63,19 @@ function reviewLinks(unit_,topic_,div) {
 if(unit !== null) {
     $('#starter').hide();
     if(topic === null) { // unit overview page
+        // unit title
+        let topicTitle = $('<p id="unittitle">Unit '+unit+": "+unitTitles['unit'+unit]+'</p>')
+        $('#header').append(topicTitle)
+        // kbat div
         let kbatDiv = $('<div id="kbatDiv" class="content">');
         kbatDiv.html(kbat(unit));
         $('#body').append(kbatDiv);
         learningObjectives(unit,topic,kbatDiv);
-        // unit title
-        let topicTitle = $('<p id="unittitle">Unit '+unit+": "+unitTitles['unit'+unit]+'</p>')
-        $('#header').append(topicTitle)
+        // review links div
+        let reviewDiv = $('<div id="reviewDiv" class="content">');
+        reviewDiv.html($('#reviewTemplate').html())
+        reviewLinks(unit,topic,reviewDiv)
+        $('#body').append(reviewDiv);
     } else {
         // topic title
         let topicTitle = $('<p id="topictitle">Topic '+unit+"."+topic+': '+topicTitles['unit'+unit]['topic'+topic]+'</p>')
