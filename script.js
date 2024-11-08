@@ -42,11 +42,9 @@ function learningObjectives(unit_,topic_,div) {
         })
     })
 }
-function reviewLinks(unit_,topic_,div) {
+function reviewLinks(unit_,div) {
     fetch(baseUrl+'/unit'+unit_+'/review-links').then(function(r) {
         r.text().then(function(text) {
-            // let linksArray = text.replaceAll('\r','').split('\n\n')
-            // let links = topic_ != null ? linksArray[topic_-1] : text
             let newLinksArr = text.replaceAll('\r','').split('\n')
             let paragraph = $(`<p style="font-weight:bold;margin-bottom:2px;">Review links: </p>`);
             div.append(paragraph);
