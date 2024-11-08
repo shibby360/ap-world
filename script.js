@@ -100,8 +100,8 @@ if(unit !== null) {
         learningObjectives(unit,topic,kbatDiv);
         // review section
         let reviewDiv = $('<div id="reviewDiv" class="content">');
-        reviewDiv.html($('#reviewTemplate').html())
-        reviewLinks(unit,topic,reviewDiv)
+        reviewDiv.html($('#reviewTemplate').html());
+        reviewLinks(unit,reviewDiv);
         $('#body').append(reviewDiv);
     }
 }
