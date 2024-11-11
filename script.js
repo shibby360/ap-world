@@ -45,6 +45,8 @@ function learningObjectives(unit_,topic_,div) {
 function reviewLinks(unit_,div) {
     fetch(baseUrl+'/unit'+unit_+'/review-links').then(function(r) {
         r.text().then(function(text) {
+            let overviewLink = $(`<a href="${overviewPages['unit'+unit_]}" target="_blank">Unit ${unit_} overview page</a>`)
+            div.append(overviewLink)
             let newLinksArr = text.replaceAll('\r','').split('\n')
             let paragraph = $(`<p style="font-weight:bold;margin-bottom:2px;">Review links: </p>`);
             div.append(paragraph);
