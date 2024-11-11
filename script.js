@@ -50,9 +50,9 @@ function reviewLinks(unit_,div) {
             div.append(paragraph);
             for(let link of newLinksArr) {
                 let splitLink = link.split('|');
-                let lnkRef = splitLink[0];
+                let lnkRef = splitLink[1];
                 let lnkTxt = splitLink[0] == "" ? splitLink[1] : splitLink[0];
-                let linkEl = $(`<a style="margin:0;" href="${lnkRef}">${lnkTxt}</a>`);
+                let linkEl = $(`<a style="margin:0;" href="${lnkRef}" target="_blank">${lnkTxt}</a>`);
                 div.append(linkEl);
             }
         })
@@ -61,6 +61,8 @@ function reviewLinks(unit_,div) {
 if(unit !== null) {
     $('#starter').hide();
     if(topic === null) { // unit overview page
+        // style
+        $('#body').css('grid-template-rows', '1fr')
         // unit title
         let topicTitle = $('<p id="unittitle">Unit '+unit+": "+unitTitles['unit'+unit]+'</p>')
         $('#header').append(topicTitle)
