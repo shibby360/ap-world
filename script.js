@@ -72,7 +72,7 @@ if(unit !== null) {
         // review links div
         let reviewDiv = $('<div id="reviewDiv" class="content">');
         reviewDiv.html($('#reviewTemplate').html())
-        reviewLinks(unit,topic,reviewDiv)
+        reviewLinks(unit,reviewDiv)
         $('#body').append(reviewDiv);
     } else {
         // topic title
