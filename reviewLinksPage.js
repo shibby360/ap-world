@@ -18,6 +18,6 @@ function putLinks(text) {
         $('#links').append(linkDiv);
     }
 }
-fetch(baseUrl+'/unit'+unit_+'/review-links').then(function(r) {
+fetch(baseUrl+'/unit'+unit+'/review-links').then(function(r) {
     r.text().then(putLinks)
 })
