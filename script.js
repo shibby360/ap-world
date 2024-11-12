@@ -55,7 +55,7 @@ function reviewLinks(unit_,div) {
                 let lnkRef = splitLink[1];
                 let lnkTxt = splitLink[0] == "" ? splitLink[1] : splitLink[0];
                 let linkEl = $(`<a style="margin:0;" href="${lnkRef}" target="_blank">${lnkTxt}</a>`);
-                div.append(linkEl);
+                div.find('div').append(linkEl);
             }
         })
     })
