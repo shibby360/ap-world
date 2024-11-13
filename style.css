@@ -39,3 +39,7 @@ body {
     margin: 0;
     margin-top: 0.5%;
 }
+#readingDiv { 
+    display: flex;
+    justify-content: space-around;
+}

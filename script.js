@@ -1,9 +1,16 @@
-function amsco(unit_,topic_) {
-    let content = $('#amscoTemplate');
+function reading(unit_,topic_) {
+    let content = $('#readingTemplate');
+    let amscoStuff = content.find('#amscoDiv')
     let amscoUrl = baseUrl+'/unit'+unit_+'/topic'+topic_+'/Amsco_'+unit_+'.'+topic_+'.pdf'
-    content.find('a').attr('href', amscoUrl);
-    content.find('iframe').attr('src', amscoUrl);
-    content.find('a').text("Amsco "+unit_+"."+topic_+" Reading");
+    amscoStuff.find('a').attr('href', amscoUrl);
+    amscoStuff.find('iframe').attr('src', amscoUrl);
+    amscoStuff.find('a').text("Amsco "+unit_+"."+topic_+" Reading");
+    let wtwaStuff = content.find('#wtwaDiv')
+    let pages = wtwaPages["unit"+unit_]
+    for(let page of pages) {
+        let li = $('<li>' + page + '</li>')
+        wtwaStuff.find('ul').append(li)
+    }
     return content.html();
 }
 function notes(unit_, topic_) {
@@ -90,9 +97,9 @@ if(unit !== null) {
         essentialQ.css('font-size', fontSize)
         $('#header').append(essentialQ)
         // amsco section
-        let amscoDiv = $('<div id="amscoDiv" class="content">');
-        amscoDiv.html(amsco(unit,topic));
-        $('#body').append(amscoDiv);
+        let readingDiv = $('<div id="readingDiv">');
+        readingDiv.html(reading(unit,topic));
+        $('#body').append(readingDiv);
         // notes section
         let notesDiv = $('<div id="notesDiv" class="content">');
         notesDiv.html(notes(unit,topic));
