@@ -4,5 +4,4 @@ ap world resources
 need to add:
 + amsco mc pdfs/answers
 + wtwa pages
-+ fallbacks for unfound links
-+ make seperate page with iframes for review links
++ fallbacks for review links

@@ -5,8 +5,9 @@ if(document.location.host !== "shibby360.github.io") {
 const params = new URLSearchParams(window.location.search);
 let unit = params.get('unit');
 let topic = params.get('topic');
+let maxUnit = 5;
 // Units
-for(i = 1; i < 10; i++) {
+for(i = 1; i <= maxUnit; i++) {
     let link = $(`<a href="${baseUrl+'?unit='+i}">Unit ${i}</a><span>&nbsp;&nbsp;</span>`)
     $('#unitbuttons').append(link)
 }
