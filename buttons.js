@@ -8,7 +8,7 @@ let topic = params.get('topic');
 let maxUnit = 5;
 // Units
 for(i = 1; i <= maxUnit; i++) {
-    let link = $(`<a href="${baseUrl+'?unit='+i}">Unit ${i}</a><span>&nbsp;&nbsp;</span>`)
+    let link = $(`<a href="${baseUrl+'?unit='+i}" ${i == unit ? "style='color:red;'" : ""}>Unit ${i}</a><span>&nbsp;&nbsp;</span>`)
     $('#unitbuttons').append(link)
 }
 // topics
@@ -18,7 +18,7 @@ if(unit !== null) {
     $('#topicbuttons').append(link)
     topics = topicsInUnit["unit"+unit]
     for(i = 1; i < topics+1; i++) {
-        let link = $(`<a href="${baseUrl+'?unit='+unit+'&topic='+i}">Topic ${unit}.${i}</a><span>&nbsp;&nbsp;</span>`)
+        let link = $(`<a href="${baseUrl+'?unit='+unit+'&topic='+i}" ${i == topic ? "style='color:red;'" : ""}>Topic ${unit}.${i}</a><span>&nbsp;&nbsp;</span>`)
         $('#topicbuttons').append(link)
     }
 }

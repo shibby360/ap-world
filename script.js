@@ -56,6 +56,11 @@ function reviewLinks(unit_,div) {
             div.prepend(paragraph);
             let overviewLink = $(`<a href="${overviewPages['unit'+unit_]}" target="_blank">Unit ${unit_} overview page</a>`)
             div.prepend(overviewLink)
+            if(text === '') { 
+                let txt = $('<p style="margin: 0;">none</p>')
+                div.append(txt);
+                return
+            };
             let newLinksArr = text.replaceAll('\r','').split('\n')
             for(let link of newLinksArr) {
                 let splitLink = link.split('|');

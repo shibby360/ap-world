@@ -18,6 +18,12 @@ body {
     width: 100%;
     text-align: center;
 }
+#topicbuttons > a, #unitbuttons > a {
+    color: blue;
+}
+#topicbuttons > a:active, #unitbuttons > a:active {
+    color: black;
+}
 #body {
     display: grid;
     grid-template-columns: 1fr 1fr;
