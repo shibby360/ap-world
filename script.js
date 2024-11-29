@@ -75,13 +75,11 @@ function reviewLinks(unit_,div) {
 if(unit !== null) {
     $('#starter').hide();
     if(topic === null) { // unit overview page
-        // style
-        $('#body').css('grid-template-rows', '1fr')
         // unit title
         let topicTitle = $('<p id="unittitle">Unit '+unit+": "+unitTitles['unit'+unit]+'</p>')
         $('#header').append(topicTitle)
         // kbat div
-        let kbatDiv = $('<div id="kbatDiv" class="content">');
+        let kbatDiv = $('<div id="kbatDiv" class="content" style="grid-row:1/3;"');
         kbatDiv.html(kbat(unit));
         $('#body').append(kbatDiv);
         learningObjectives(unit,topic,kbatDiv);
@@ -90,6 +88,16 @@ if(unit !== null) {
         reviewDiv.html($('#reviewTemplate').html())
         reviewLinks(unit,reviewDiv)
         $('#body').append(reviewDiv);
+        // WTWA reading div
+        let wtwaDiv = $('<div id="wtwaDiv" class="content"></div>')
+        let wtwaStuff = $('body').find('#wtwaDiv')
+        let pages = wtwaPages["unit"+unit_]
+        for(let page of pages) {
+            let li = $('<li>' + page + '</li>')
+            wtwaStuff.find('ul').append(li)
+        }
+        wtwaDiv.html(wtwaStuff.html())
+        $('#body').append(wtwaDiv)
     } else {
         // topic title
         let topicTitle = $('<p id="topictitle">Topic '+unit+"."+topic+': '+topicTitles['unit'+unit]['topic'+topic]+'</p>')
