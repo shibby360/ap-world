@@ -79,7 +79,7 @@ if(unit !== null) {
         let topicTitle = $('<p id="unittitle">Unit '+unit+": "+unitTitles['unit'+unit]+'</p>')
         $('#header').append(topicTitle)
         // kbat div
-        let kbatDiv = $('<div id="kbatDiv" class="content" style="grid-row:1/3;"');
+        let kbatDiv = $('<div id="kbatDiv" class="content" style="grid-row:1/3;">');
         kbatDiv.html(kbat(unit));
         $('#body').append(kbatDiv);
         learningObjectives(unit,topic,kbatDiv);
