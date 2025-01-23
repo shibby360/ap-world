@@ -44,5 +44,15 @@ topicTitles = {
         "topic8":"Reactions to the Industrial Economy from 1750 to 1900",
         "topic9":"Society and the Industrial Age",
         "topic10":"Continuity and Change in the Industrial Age"
+    },
+    "unit6":{
+        "topic1":"Rationales for Imperialism from 1750 to 1900",
+        "topic2":"State Expansion from 1750 to 1900",
+        "topic3":"Indigenous Responses to State Expansion from 1750 to 1900",
+        "topic4":"Global Economic Development from 1750 to 1900",
+        "topic5":"Economic Imperialism from 1750 to 1900",
+        "topic6":"Causes of Migration in an Interconnected World",
+        "topic7":"Effects of Migration",
+        "topic8":"Causation in the Imperial Age",
     }
 }

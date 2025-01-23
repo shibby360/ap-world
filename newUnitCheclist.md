@@ -4,6 +4,6 @@
 + add eqs
 + add kbat link
 + add overview page link
-+ add # of topics in unit
-+ add topic titles
-+ add unit title
++ add # of topics in unit (`topicsinUnit.js`)
++ add topic titles (`topicTitles.js`)
++ add unit title (`unitTitles.js`)

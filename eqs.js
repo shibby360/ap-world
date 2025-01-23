@@ -44,5 +44,15 @@ eqs = {
         "topic8":"What conditions led to calls for change in industrial societies, and what were the effects of those efforts",
         "topic9":"How did industrialization cause change in existing social hierarchies and standards of living",
         "topic10":"How did the Industrial Revolution demonstrate both continuity and change"
+    },
+    "unit6":{
+        "topic1":"What ideologies contributed to the development of imperialism between 1750 and 1900",
+        "topic2":"By what processes did state power shift in various parts of the world between 1750 and 1900",
+        "topic3":"How and why did internal and external factors influence state building between 1750 and 1900",
+        "topic4":"How did environmental factors contribute to the global economy between 1750 and 1900",
+        "topic5":"What economic factors contributed to the imperialism in the global economy between 1750 and 1900",
+        "topic6":"How did environemntal and economic factors contribute to patterns of migration between 1750 and 1900",
+        "topic7":"How and why did patterns of migration affect society between 1750 and 1900",
+        "topic8":"What was the relative significance of the effects of imperialism from 1750 to 1900"
     }
 }
