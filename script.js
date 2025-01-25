@@ -23,6 +23,9 @@ function notes(unit_, topic_) {
     } else {
         content.find('a').text("No notes template available");
     }
+    if(unit_ == "6" && topic_ == "8") {
+        content.find('a').text("Notes template for 6.8(6.1)")
+    }
     return content.html();
 }
 function kbat(unit_) {
