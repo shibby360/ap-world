@@ -32,6 +32,8 @@ wtwaPages = {
         "466-473"
     ],
     "unit6":[
-        "530-537"
+        "530-537",
+        "557-568,574(mexican revolution)-575",
+        "583(sun yat-sen)-591"
     ]
 }
