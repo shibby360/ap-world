@@ -54,5 +54,16 @@ topicTitles = {
         "topic6":"Causes of Migration in an Interconnected World",
         "topic7":"Effects of Migration",
         "topic8":"Causation in the Imperial Age",
+    },
+    "unit7":{
+        "topic1":"Shifting power after 1900",
+        "topic2":"Causes of WWI",
+        "topic3":"Conducting WWI",
+        "topic4":"Economy in the Interwar Period",
+        "topic5":"Unresolved Tensions after WWI",
+        "topic6":"Causes of WWII",
+        "topic7":"Conducting WWII",
+        "topic8":"Mass atrocities after 1900",
+        "topic9":"Causation and Global Conflict",
     }
 }

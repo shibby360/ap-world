@@ -35,5 +35,9 @@ wtwaPages = {
         "530-537",
         "557-568,574(mexican revolution)-575",
         "583(sun yat-sen)-591"
+    ],
+    "unit7":[
+        "677-683: 7.5",
+        "629-632, 635(great depressions)-638"
     ]
 }

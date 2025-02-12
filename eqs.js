@@ -54,5 +54,16 @@ eqs = {
         "topic6":"How did environemntal and economic factors contribute to patterns of migration between 1750 and 1900",
         "topic7":"How and why did patterns of migration affect society between 1750 and 1900",
         "topic8":"What was the relative significance of the effects of imperialism from 1750 to 1900"
+    },
+    "unit7":{
+        "topic1":"How did internal and external factors contribute to change in various states after 1900",
+        "topic2":"What were the causes and consequences of World War I",
+        "topic3":"What were the some of the methods governments used to fight World War I",
+        "topic4":"How did differnet governments respond to economic crises after 1900",
+        "topic5":"How did continuities and changes in territorial holdings create tensions after World War I",
+        "topic6":"What were the causes and consequences of World War II",
+        "topic7":"What similarities and differences were there in the methods governments used to conduct war",
+        "topic8":"What were the causes and consequences of mass atrocities from 1900 to the present",
+        "topic9":"What was the relative significance of the causes of global conflict from 1900 to the present",
     }
 }
