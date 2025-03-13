@@ -65,5 +65,16 @@ eqs = {
         "topic7":"What similarities and differences were there in the methods governments used to conduct war",
         "topic8":"What were the causes and consequences of mass atrocities from 1900 to the present",
         "topic9":"What was the relative significance of the causes of global conflict from 1900 to the present",
+    },
+    "unit8":{
+        "topic1":"What was the historical context for the Cold War after World War II",
+        "topic2":"What were the causes and effects of the ideological struggle of the Cold War",
+        "topic3":"In what ways did both the Soviet Union and the United States seek to maintain influence during the Cold war",
+        "topic4":"How did communism and land reform affect China and other countries",
+        "topic5":"How did people pursue independence after 1900",
+        "topic6":"What political changes led to territorial, demographic, and nationalist developments and the economic shifts that resulted",
+        "topic7":"What were the differing reactions to existing power structures after 1900",
+        "topic8":"What caused the end of the Cold War",
+        "topic9":"Why and to what extent were the effects of the Cold War similar in the Eastern and Western Hemispheres",
     }
 }

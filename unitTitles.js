@@ -5,5 +5,6 @@ unitTitles = {
   "unit4":"Maritime Empires and Revolution",
   "unit5":"Revolutions",
   "unit6":"Consequences of Industrialization",
-  "unit7":"Global conflict"
+  "unit7":"Global conflict",
+  "unit8":"Cold War and Decolonization"
 }

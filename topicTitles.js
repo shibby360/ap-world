@@ -65,5 +65,16 @@ topicTitles = {
         "topic7":"Conducting WWII",
         "topic8":"Mass atrocities after 1900",
         "topic9":"Causation and Global Conflict",
+    },
+    "unit8":{
+        "topic1":"Setting the Stage for Cold War and Decolonization",
+        "topic2":"The Cold War",
+        "topic3":"Effects of the Cold War",
+        "topic4":"Spread of Communism After 1900",
+        "topic5":"Decolonization After 1900",
+        "topic6":"Newly Independent States",
+        "topic7":"Global Resistance to Established Power Structures After 1900",
+        "topic8":"End of the Cold War",
+        "topic9":"Causation in the Age of the Cold War and Decolonization",
     }
 }

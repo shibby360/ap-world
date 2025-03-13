@@ -5,5 +5,6 @@ topicsInUnit = {
     "unit4":8,
     "unit5":10,
     "unit6":8,
-    "unit7":9
+    "unit7":9,
+    "unit8":9
 }
